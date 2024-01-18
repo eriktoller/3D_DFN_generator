@@ -3,11 +3,11 @@ from DFN_classes import *
 import matplotlib.pyplot as plt
 import math
 import pickle
+import glob
 
 from matplotlib.axes import Axes
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 import datetime
-
 
 
 def find_intersections(dfn0: DFN) -> List:
@@ -403,7 +403,6 @@ DFN_rand = generate_fractures(bbox, num_frac, r_min, r_max, 'DFN_random')
 # Find the intersections
 [int_list, z_int] = find_intersections(DFN_rand)
 
-
 # Print the DFN information
 name = str(ct.date()) + '_' + DFN_rand.name + '_data_0.pkl'
 print('DFN information:')
@@ -425,7 +424,6 @@ for zcc in DFN_rand.fractures:
     plot_circle_3d(zcc, 100, ax0)
     plot_frac_coord(zcc, .2, .5, ax0)
 
-
 # Plot intersections
 for zcc in DFN_rand.fractures:
     for zi in zcc.z_int:
@@ -437,19 +435,16 @@ print("Program finished at: ", ct2)
 exe_time = ct2 - ct
 print("           and took: ", exe_time)
 
-
 # Save DFN as pickle
-import glob
-
-files = glob.glob(('data/'+name))
+files = glob.glob(('data/' + name))
 cnt_name = 0
 while len(files) > 0:
     cnt_name = cnt_name + 1
-    m = 4 + len(str(cnt_name-1))
+    m = 4 + len(str(cnt_name - 1))
     name = name[0:-m] + str(cnt_name) + '.pkl'
-    files = glob.glob(('data/'+name))
+    files = glob.glob(('data/' + name))
 
-output = open(('data/'+name), 'wb')
+output = open(('data/' + name), 'wb')
 data1 = {'DFN': DFN_rand,
          'fig': fig,
          'start_time': ct,
