@@ -16,7 +16,7 @@ A program that generates a DFN based on:
 - `r_min`: minimum radius of a fracture
 - `r_max`: maxium radius of a fracture
 
-The DFN is save to a *.pkl'-file.
+The DFN is save to a `*.pkl`-file.
 
 ## DFN viewer `load_DFN.py`
 A program the plots a privously save DFN. The user is asked to select a file when the prgoram is started.
