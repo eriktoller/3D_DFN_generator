@@ -1,9 +1,11 @@
-# 3D_DFN_generator
+# 3D DFN generator
 A generator for a 3D Discrete Fracture Network (DFN)
 
 The repository contains two different programs:
 1. DFN generator
 2. DFN viewer
+
+The file `demo_frac3.pkl` is a previously generated DFN with three fractures.
 
 ## DFN generator
 A program that generates a DFN based on:
@@ -15,4 +17,4 @@ A program that generates a DFN based on:
 The DFN is save to a *.pkl'-file.
 
 ## DFN viewer
-A program the plots a privously save DFN.
+A program the plots a privously save DFN. The user is asked to select a file when the prgoram is started.
