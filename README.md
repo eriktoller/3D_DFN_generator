@@ -7,10 +7,10 @@ The repository contains two different programs:
 
 ## DFN generator
 A program that generates a DFN based on:
-*bbox*: the bounding box for the DFN
-*num_frac*: numer of fractures
-*r_min*: minimum radius of a fracture
-*r_max*: maxium radius of a fracture
+- `bbox`: the bounding box for the DFN
+- `num_frac`: numer of fractures
+- `r_min`: minimum radius of a fracture
+- `r_max`: maxium radius of a fracture
 
 The DFN is save to a *.pkl'-file.
 
