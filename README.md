@@ -2,8 +2,10 @@
 A generator for a 3D Discrete Fracture Network (DFN)
 
 The repository contains two different programs:
-1. DFN generator
-2. DFN viewer
+1. `generate_DFN.py` a DFN generator
+2. `load_DFN.py` a DFN viewer
+
+The file `DFN_classes.py` contains the python classes.
 
 The file `demo_frac3.pkl` is a previously generated DFN with three fractures.
 
